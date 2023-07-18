@@ -1,13 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@keyframes moveRight {
+  100% {
+    transform: translateX(410vw);
+  }
+}
+
+@keyframes moveLeft {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+.star {
+  background: url("./media/star.png");
+  height: 100%;
+  width: 400%;
+  top: 0;
+  position: absolute;
+  animation: moveLeft 50s linear infinite;
+}
+
+.ufo {
+  width: 50%;
+  position: absolute;
+  max-width: 150px;
+  background-size: 100%;
+  left: -10%;
+  top: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  display: block;
+  animation: moveRight 25s linear infinite;
+}
+
+.astronout {
+  width: 50%;
+  position: absolute;
+  max-width: 150px;
+  background-size: 100%;
+  top: 80%;
+  left: -10%;
+  bottom: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  display: block;
+  animation: moveRight 20s linear infinite;
+}
+
+.surface {
+  background: url("./media/surface.jpg");
+  width: 400vw;
+  height: 7%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  position: absolute;
+  background-repeat: repeat-x;
+  animation: moveLeft 15s linear infinite;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
