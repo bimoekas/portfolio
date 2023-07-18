@@ -22,7 +22,7 @@ body {
 
 @keyframes moveRight {
   100% {
-    transform: translateX(410vw);
+    transform: translateX(510vw);
   }
 }
 
@@ -38,7 +38,7 @@ body {
 .star {
   background: url("./media/star.png");
   height: 100%;
-  width: 400%;
+  width: 500%;
   top: 0;
   position: absolute;
   animation: moveLeft 50s linear infinite;
@@ -62,7 +62,7 @@ body {
   position: absolute;
   max-width: 150px;
   background-size: 100%;
-  top: 80%;
+  justify-context: flex-end;
   left: -10%;
   bottom: 0;
   z-index: 1;
@@ -73,7 +73,7 @@ body {
 
 .surface {
   background: url("./media/surface.jpg");
-  width: 400vw;
+  width: 500vw;
   height: 7%;
   bottom: 0;
   left: 0;
