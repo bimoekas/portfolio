@@ -4,7 +4,7 @@ export default function Projects() {
       <div className="w-full h-full">
         <h1 className="glitch text-5xl top-8">Projects</h1>
         <div className="relative justify-center items-center top-1/3">
-          <p className="text-white text-center">Konten 2</p>
+          <p className="glitch text-center text-8xl">Coming Soon</p>
         </div>
       </div>
     </div>
