@@ -14,7 +14,7 @@ export default function Experience() {
       <div className="w-full h-full">
         <h1 className="glitch text-5xl top-8">Experience</h1>
         <div className="relative justify-center items-center top-11">
-          <div className="xl:h-[42rem] sm:h-44 md:h-64 h-[42rem] w-full overflow-hidden flex flex-col items-center">
+          <div className="xl:h-[42rem] sm:h-44 md:h-64 h-[28rem] w-full overflow-hidden flex flex-col items-center">
             <div className="flex flex-wrap w-full xl:w-3/4 items-center flex-col">
               <div className="w-fit">
                 <ul

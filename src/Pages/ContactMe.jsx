@@ -36,7 +36,7 @@ export default function ContactMe() {
     <div className="flex-shrink-0 w-full h-full flex items-center justify-center bg-black">
       <div className="w-full h-full">
         <h1 className="glitch text-5xl top-8">Contact Me</h1>
-        <div className="justify-center items-center flex flex-col relative lg:top-[14%] md:top-12 top-16">
+        <div className="justify-center items-center flex flex-col relative lg:top-[14%] md:top-12 top-8">
           <div className="flex flex-col space-y-4">
             <form
               ref={form}
@@ -66,7 +66,7 @@ export default function ContactMe() {
               />
               <textarea
                 name="message"
-                className="feedback-input h-80 md:h-16 lg:h-28 md:resize-none sm:resize-none"
+                className="feedback-input h-40 md:h-16 lg:h-28 md:resize-none sm:resize-none"
                 placeholder="Message"
               />
               <input

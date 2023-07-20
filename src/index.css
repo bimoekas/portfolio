@@ -31,7 +31,7 @@ body {
     background-position: 0 0;
   }
   to {
-    background-position: -100vw 0;
+    background-position: -100% 0;
   }
 }
 
@@ -81,7 +81,7 @@ body {
   z-index: 1;
   position: absolute;
   background-repeat: repeat-x;
-  animation: moveLeft 5s linear infinite;
+  animation: moveLeft 15s linear infinite;
 }
 
 code {
