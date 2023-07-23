@@ -38,7 +38,7 @@ export default function ContactMe() {
         <h1 className="glitch text-2xl text-center lg:text-6xl lg:text-left sm:text-2xl md:text-2xl top-8">
           Contact Me
         </h1>
-        <div className="justify-center items-center flex flex-col relative lg:top-[14%] md:top-12 top-8">
+        <div className="justify-center items-center flex flex-col relative lg:top-[14%] md:top-12 top-8 h-[70vh]">
           <div className="flex flex-col space-y-4">
             <form
               ref={form}
