@@ -4,27 +4,48 @@ import "./styles/glitch.css";
 import "./styles/blink.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import Welcome from "./Pages/Welcome";
-import Skills from "./Pages/Skills";
-import Projects from "./Pages/Projects";
-import Experience from "./Pages/Experience";
-import ContactMe from "./Pages/ContactMe";
-import Header from "./Pages/projects/components/Header";
-import Introduction from "./Pages/projects/components/Introduction";
-import Preview from "./Pages/projects/components/Preview";
-import Tools from "./Pages/projects/components/Tools";
 import Overview from "./Pages/projects/Overview";
 import Index from "./Pages/Index";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const isMobileDevice = window.matchMedia("(max-height: 450px)").matches;
+    setIsMobile(isMobileDevice);
+
+    window.addEventListener("orientationchange", handleOrientationChange);
+
+    return () => {
+      window.removeEventListener("orientationchange", handleOrientationChange);
+    };
+  }, []);
+
+  const handleOrientationChange = () => {
+    if (window.orientation === 90 || window.orientation === -90) {
+      setIsMobile(true);
+      window.location.reload();
+    } else {
+      setIsMobile(false);
+    }
+  };
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/overview-projects" element={<Overview />} />
-      </Routes>
-    </Router>
+    <div>
+      {!isMobile ? (
+        <Router>
+          <Routes>
+            <Route path="/portfolio" element={<Index />} />
+            <Route path="/overview-projects/:id" element={<Overview />} />
+          </Routes>
+        </Router>
+      ) : (
+        <div className="flex flex-col items-center justify-center glitch h-screen text-xl text-center">
+          Mohon maaf, tidak dapat diakses dalam keadaan landscape
+        </div>
+      )}
+    </div>
   );
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { XIcon, MenuIcon, MoveLeftIcon } from "lucide-react";
-import { Link, ScrollLink } from "react-scroll";
+import { Link } from "react-scroll";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
@@ -14,21 +14,21 @@ const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full max-w-7xl">
+    <div className="w-full max-w-7xl ">
       <div className="md:flex items-center justify-between py-2 md:px-10 px-7 sticky ">
         {/* logo section */}
         <div className="flex justify-between space-x-4">
           {/* Back Icon */}
           <div
             className="cursor-pointer md:hidden w-7 h-7 text-white"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/portfolio")}
           >
             <MoveLeftIcon />
           </div>
           <div className="font-bold cursor-pointer flex items-center gap-1">
-            <span className="text-primary lg:text-xl text-sm hover:text-white text-center">
+            <p className="text-primary lg:text-xl text-sm hover:text-white text-center">
               Kaltara Siap Project App
-            </span>
+            </p>
           </div>
           {/* Menu icon */}
           <div

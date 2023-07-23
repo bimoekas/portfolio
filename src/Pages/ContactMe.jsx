@@ -35,7 +35,9 @@ export default function ContactMe() {
   return (
     <div className="flex-shrink-0 w-full h-full flex items-center justify-center bg-black">
       <div className="w-full h-full">
-        <h1 className="glitch text-5xl top-8">Contact Me</h1>
+        <h1 className="glitch text-2xl text-center lg:text-6xl lg:text-left sm:text-2xl md:text-2xl top-8">
+          Contact Me
+        </h1>
         <div className="justify-center items-center flex flex-col relative lg:top-[14%] md:top-12 top-8">
           <div className="flex flex-col space-y-4">
             <form
@@ -72,7 +74,7 @@ export default function ContactMe() {
               <input
                 type="submit"
                 value="SUBMIT"
-                className="md:h-8 lg:h-14 flex flex-col items-center justify-center"
+                className="md:h-8 lg:h-14 flex flex-col text-sm items-center justify-center"
               />
             </form>
           </div>
