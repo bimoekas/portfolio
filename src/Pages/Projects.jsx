@@ -60,7 +60,12 @@ export default function Projects() {
         </h1>
 
         {/* Carousel */}
-        <div className="relative justify-center items-center px-4 flex flex-col lg:top-[4rem] top-1/3">
+        <div className="relative justify-center items-center px-4 flex flex-col lg:top-[3rem] top-[25vh]">
+          {isMobileDevice && (
+            <div className="blink text-xl sm:text-xl lg:text-2xl md:text-xl px-4">
+              SLIDE TO RIGHT OR LEFT
+            </div>
+          )}
           <div className="px-2 lg:w-[60rem] w-72">
             <Slider {...settings} arrows={isMobileDevice}>
               {slideData.map((item) => (

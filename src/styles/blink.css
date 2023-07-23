@@ -3,10 +3,8 @@
 }
 
 .blink {
-  padding: 15px;
   text-align: center;
   z-index: 5;
-  line-height: 50px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   animation: blink 1s linear infinite;
   animation-name: blinker;
