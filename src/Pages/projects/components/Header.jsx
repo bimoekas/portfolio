@@ -3,10 +3,9 @@ import { XIcon, MenuIcon, MoveLeftIcon } from "lucide-react";
 import { Link } from "react-scroll";
 import { useNavigate } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
   let Links = [
     { name: "Introduction", link: "introduction" },
-    { name: "Tools", link: "tools" },
     { name: "Projects", link: "projects" },
   ];
   let [open, setOpen] = useState(false);
@@ -27,7 +26,7 @@ const Header = () => {
           </div>
           <div className="font-bold cursor-pointer flex items-center gap-1">
             <p className="text-primary lg:text-xl text-sm hover:text-white text-center">
-              Kaltara Siap Project App
+              {props.title}
             </p>
           </div>
           {/* Menu icon */}

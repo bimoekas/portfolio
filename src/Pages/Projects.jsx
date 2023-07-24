@@ -3,6 +3,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 
+import KaltaraSiap from "../media/projects/kaltara-siap/mockup/projects.png";
+import PantauRelawan from "../media/projects/pantau-relawan/mockup/Projects-pantau-relawan.png";
+import KaltaraSsh from "../media/projects/kaltara-ssh/mockup/Kaltara SSH.png";
+import KaltaraAset from "../media/projects/kaltara-aset/mockup/Kaltara Aset.png";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/border-animation.css";
@@ -10,22 +15,22 @@ import "../styles/border-animation.css";
 const slideData = [
   {
     id: 1,
-    image: "https://picsum.photos/id/1/1280/720",
-    titlte: "Kaltara Siap",
+    image: KaltaraSiap,
+    titlte: "Kaltara Go",
   },
   {
     id: 2,
-    image: "https://picsum.photos/id/2/1280/720",
+    image: PantauRelawan,
     titlte: "Pantau Relawan",
   },
   {
     id: 3,
-    image: "https://picsum.photos/id/3/1280/720",
+    image: KaltaraSsh,
     titlte: "Kaltara Standard Satuan Harga",
   },
   {
     id: 4,
-    image: "https://picsum.photos/id/4/1280/720",
+    image: KaltaraAset,
     titlte: "Kaltara Manajemen Aset",
   },
 ];
@@ -79,8 +84,12 @@ export default function Projects() {
                   }}
                   key={item.id}
                 >
-                  <div className="card">
-                    <img src={item.image} alt="" className="object-cover" />
+                  <div className="box flex flex-col items-center p-8">
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="object-fill h-40 lg:h-[30rem]"
+                    />
                     <span className="top"></span>
                     <span className="right"></span>
                     <span className="bottom"></span>
